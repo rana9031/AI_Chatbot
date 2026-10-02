@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: ai-chatbot
+    runtime: python
+    buildCommand: ./build.sh
+    startCommand: gunicorn chatbot_project.wsgi:application
